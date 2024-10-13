@@ -48,7 +48,7 @@ export class RedisManager {
         this.client.lPush("db_processor", JSON.stringify(message));
     }
 
-    public publishMesssages(channel: string, message: WsMessage) {
+    public publishMessages(channel: string, message: WsMessage) {
         this.client.publish(channel, JSON.stringify(message));
     }
 

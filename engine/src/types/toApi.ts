@@ -1,4 +1,4 @@
-// todo: see down
+import { Order } from "../trade/Orderbook";
 
 export const CREATE_ORDER = "CREATE_ORDER";
 export const CANCEL_ORDER = "CANCEL_ORDER";
@@ -30,8 +30,7 @@ export type MessageToApi = {
         executedQty: number,
         remainingQty: number
     }
+} | {
+    type: "OPEN_ORDERS",
+    payload: Order[]
 }
-// } | {
-//     type: "OPEN_ORDERS",
-//     payload: Order[]
-// }
